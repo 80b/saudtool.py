@@ -1,4 +1,9 @@
-aimport os
+################
+# Made by Raz  #
+# Dont Skid Me.#
+################
+
+import os
 import requests
 class bcolors:
     HEADER = '\033[95m'
