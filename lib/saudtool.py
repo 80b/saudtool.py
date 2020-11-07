@@ -2,6 +2,8 @@
 # Made by Raz  #
 # Dont Skid Me.#
 ################
+from discord_webhook import DiscordWebhook
+
 
 import os
 import requests
@@ -99,6 +101,22 @@ while inps != 3:
 		print('NetCat: You are listening on port 9999!')
 		os.system('nc -lnvp 9999')
 		break
+	elif inps == 9:
+		os.system('clear')
+		print("""
+Webhook sender
+By: Raz
+
+[1] Send a webhook
+[2] Execute program
+""")
+		ina = int(input("What option?:"))
+		while ina != 2:
+			if ina == 1:
+				bruh = input("Webhook URL: ")
+				bruhmsh = input("Message: ")
+				webhook = DiscordWebhook(url=bruh,  content=bruhmsh)
+				response = webhook.execute()
 	elif inps == 2:
 		os.system('clear')
 		print("""
